@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satendra Yadav | Aerospace Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Boot Sequence -->
+    <div id="boot-screen" class="boot-screen">
+        <div class="boot-content">
+            <p class="mono-text typing-text">> INITIALIZING SYSTEM...</p>
+            <p class="mono-text typing-text delay-1">> LOADING ENGINEERING PROFILE...</p>
+            <p class="mono-text typing-text delay-2 text-cyan">> SYSTEM READY.</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress & Custom Cursor -->
+    <div class="scroll-progress"></div>
+    <div class="custom-cursor"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <h1 class="logo-name">SATENDRA YADAV</h1>
+                <span class="logo-sub">AEROSPACE ENGINEERING</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="bg-grid"></div>
+        <div class="hero-container">
+            <div class="hero-content fade-in-up">
+                <span class="tech-label">AEROSPACE ENGINEER</span>
+                <h2 class="hero-title">Engineering Ideas <br><span class="text-blue">Into Flight.</span></h2>
+                <p class="hero-desc">
+                    Aerospace Engineering professional focused on designing, analyzing, and developing high-performance engineering systems. Specializing in aerodynamics, advanced propulsion, and precision mechanical design.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Engineering Work <span class="arrow">→</span></a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-slow">
+                
+                <!-- Precision Compass Graphic -->
+                <div id="compass-graphic">
+                    <svg class="aero-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer Tracking Rings -->
+                        <circle cx="250" cy="250" r="220" class="radar-ring thin" />
+                        <circle cx="250" cy="250" r="180" class="radar-ring dashed-slow" />
+                        
+                        <!-- Inner Compass Rings -->
+                        <circle cx="250" cy="250" r="120" class="radar-ring inner" />
+                        <circle cx="250" cy="250" r="110" class="radar-ring dashed-fast" />
+                        
+                        <!-- Crosshairs -->
+                        <line x1="250" y1="10" x2="250" y2="490" class="crosshair" />
+                        <line x1="10" y1="250" x2="490" y2="250" class="crosshair" />
+                        
+                        <!-- Diagonal Axis Markings -->
+                        <line x1="80" y1="80" x2="420" y2="420" class="crosshair diagonal" />
+                        <line x1="80" y1="420" x2="420" y2="80" class="crosshair diagonal" />
+
+                        <!-- Compass North Pointer -->
+                        <polygon points="250,50 265,100 235,100" class="compass-pointer" />
+                        
+                        <!-- Center Node -->
+                        <circle cx="250" cy="250" r="8" class="center-node" />
+                        <circle cx="250" cy="250" r="30" class="radar-ring pulse-ring" />
+                    </svg>
+                </div>
+                
+                <div class="canvas-overlay">
+                    <span class="mono-text text-cyan">[ GYROSCOPIC SENSORS ACTIVE ]</span>
+                </div>
+                <div class="hud-data top-right">SYS: NOMINAL<br>AZIMUTH: 045°</div>
+                <div class="hud-data bottom-left">STATUS: ONLINE<br>PWR: 100%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">01 / PROFILE</span>
+                <h3 class="section-title">ENGINEERING PROFILE</h3>
+            </div>
+            <div class="profile-layout">
+                <!-- Profile Picture -->
+                <div class="profile-pic-container card-reveal">
+                    <div class="tech-frame">
+                        <img src="your-profile-pic.jpg" alt="Satendra Yadav" class="profile-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMwZTE1MjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjOTRhM2I4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+W0lNRyBQTEFDRUhPTERFUl08L3RleHQ+PC9zdmc+';">
+                        <div class="frame-corner top-left"></div>
+                        <div class="frame-corner top-right"></div>
+                        <div class="frame-corner bottom-left"></div>
+                        <div class="frame-corner bottom-right"></div>
+                    </div>
+                </div>
+
+                <!-- Profile Info -->
+                <div class="dashboard-main card-reveal stagger-1">
+                    <p>Driven by a passion for advanced fluid dynamics and robust mechanical design, my engineering philosophy revolves around marrying theoretical aerodynamics with manufacturable, real-world solutions. I thrive in environments demanding rigorous analysis, optimizing systems that operate under extreme stress and thermal conditions.</p>
+                </div>
+                
+                <!-- Sidebar Meta -->
+                <div class="dashboard-sidebar">
+                    <div class="info-panel card-reveal stagger-2">
+                        <span class="panel-label">DISCIPLINE</span>
+                        <span class="panel-value">Aerospace & Mech Eng</span>
+                    </div>
+                    <div class="info-panel card-reveal stagger-2">
+                        <span class="panel-label">SPECIALIZATION</span>
+                        <span class="panel-value">Propulsion & CFD</span>
+                    </div>
+                    <div class="info-panel card-reveal stagger-3">
+                        <span class="panel-label">LOCATION</span>
+                        <span class="panel-value">Bangalore, India</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4 class="stat-num" data-target="18">00</h4>
+                    <span class="stat-label">Engineering Projects</span>
+                </div>
+                <div class="stat-card">
+                    <h4 class="stat-num" data-target="4">00</h4>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <h4 class="stat-num" data-target="15">00</h4>
+                    <span class="stat-label">Technical Tools</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Expertise -->
+    <section id="expertise" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">02 / EXPERTISE</span>
+                <h3 class="section-title">TECHNICAL CAPABILITIES</h3>
+            </div>
+            <div class="capabilities-grid">
+                <div class="cap-card card-reveal">
+                    <div class="cap-icon">⚙️</div>
+                    <h4>Mechanical Design & CAD</h4>
+                    <ul class="mono-list">
+                        <li>SolidWorks / CATIA</li>
+                        <li>Siemens NX</li>
+                        <li>GD&T / Drafting</li>
+                        <li>Composite Manufacturing</li>
+                    </ul>
+                </div>
+                <div class="cap-card card-reveal stagger-1">
+                    <div class="cap-icon">✈️</div>
+                    <h4>Aerospace Systems</h4>
+                    <ul class="mono-list">
+                        <li>Aerodynamics (Sub & Supersonic)</li>
+                        <li>Flight Mechanics</li>
+                        <li>Gas Turbine Propulsion</li>
+                        <li>UAV Airframe Design</li>
+                    </ul>
+                </div>
+                <div class="cap-card card-reveal stagger-2">
+                    <div class="cap-icon">📊</div>
+                    <h4>Analysis & Simulation</h4>
+                    <ul class="mono-list">
+                        <li>ANSYS (FEA/CFD)</li>
+                        <li>MATLAB / Simulink</li>
+                        <li>Thermodynamics Modeling</li>
+                        <li>Structural Load Testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">03 / EDUCATION</span>
+                <h3 class="section-title">ACADEMIC TRAINING</h3>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card card-reveal">
+                    <div class="edu-meta">
+                        <span class="edu-year">2019 — 2023</span>
+                        <span class="edu-type">B.Tech</span>
+                    </div>
+                    <h4 class="edu-degree">Aerospace Engineering</h4>
+                    <span class="edu-institution">Leading Institute of Technology, India</span>
+                    <p class="edu-desc">Core coursework: Computational Fluid Dynamics, Aerospace Structures, Flight Dynamics, Mechanical Vibrations, and Advanced Thermodynamics. Graduated with First-Class Honors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">04 / EXPERIENCE</span>
+                <h3 class="section-title">FLIGHT LOG / CAREER</h3>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card-reveal">
+                        <span class="timeline-date">2023 — PRESENT</span>
+                        <h4 class="timeline-role">Aerospace Design Engineer</h4>
+                        <span class="timeline-company">AeroTech Systems | Bangalore, India</span>
+                        <p class="timeline-desc">Leading the structural analysis and aerodynamic optimization of composite UAV airframes. Reduced overall drag by 14% through iterative CFD simulations and wind tunnel testing validation.</p>
+                        <div class="tech-tags">
+                            <span>ANSYS Fluent</span><span>CATIA V5</span><span>MATLAB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card-reveal">
+                        <span class="timeline-date">2022 — 2023</span>
+                        <h4 class="timeline-role">Mechanical Engineering Intern</h4>
+                        <span class="timeline-company">Advanced Propulsion Labs</span>
+                        <p class="timeline-desc">Assisted in the design and prototyping of a cryogenic fuel pump system for experimental launch vehicles. Handled 3D CAD modeling, GD&T documentation, and basic thermal stress analysis.</p>
+                        <div class="tech-tags">
+                            <span>SolidWorks</span><span>Thermodynamics</span><span>GD&T</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">05 / PROJECTS</span>
+                <h3 class="section-title">ENGINEERING WORK</h3>
+            </div>
+            <div class="projects-grid">
+                <a href="#" class="project-card card-reveal">
+                    <div class="project-img-placeholder">
+                        <span class="mono-text">[CFD VISUALIZATION OF NOZZLE FLOW]</span>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-cat">PROPULSION / CFD</span>
+                        <h4 class="project-name">Supersonic Convergent-Divergent Nozzle</h4>
+                        <p class="project-desc">Engineered and simulated a C-D nozzle for a micro-turbojet engine. Utilized ANSYS Fluent to analyze shockwave formations and optimize exhaust velocity profiles at Mach 2.5.</p>
+                        <span class="project-link">View Documentation <span class="arrow">↗</span></span>
+                    </div>
+                </a>
+                <a href="#" class="project-card card-reveal stagger-1">
+                    <div class="project-img-placeholder">
+                        <span class="mono-text">[CAD ASSEMBLY OF UAV AIRFRAME]</span>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-cat">AEROSPACE STRUCTURES</span>
+                        <h4 class="project-name">Lightweight Composite UAV</h4>
+                        <p class="project-desc">Designed a modular blended-wing UAV for agricultural surveying. Conducted FEA to ensure structural integrity of the carbon-fiber spars under 5G maneuvering loads.</p>
+                        <span class="project-link">View Documentation <span class="arrow">↗</span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">06 / ACHIEVEMENTS</span>
+                <h3 class="section-title">CERTIFICATIONS & AWARDS</h3>
+            </div>
+            <div class="achievements-grid">
+                <div class="achieve-card card-reveal">
+                    <div class="achieve-icon">🏆</div>
+                    <div class="achieve-info">
+                        <h4>National Aerospace Design Challenge</h4>
+                        <span class="mono-text text-cyan">WINNER - 2023</span>
+                        <p>Secured 1st place for designing a hyper-efficient autonomous glider conceptualized for high-altitude meteorological data collection.</p>
+                    </div>
+                </div>
+                <div class="achieve-card card-reveal stagger-1">
+                    <div class="achieve-icon">📜</div>
+                    <div class="achieve-info">
+                        <h4>Certified SolidWorks Professional (CSWP)</h4>
+                        <span class="mono-text text-cyan">DASSAULT SYSTÈMES</span>
+                        <p>Demonstrated advanced competency in parametric modeling, complex assemblies, and mechanical detailing.</p>
+                    </div>
+                </div>
+                <div class="achieve-card card-reveal stagger-2">
+                    <div class="achieve-icon">🔬</div>
+                    <div class="achieve-info">
+                        <h4>Research Publication</h4>
+                        <span class="mono-text text-cyan">AEROSPACE JOURNAL</span>
+                        <p>Co-authored a technical paper on "Thermal Management in Next-Gen Micro-Turbines" focusing on novel cooling channel geometries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">07 / CONTACT</span>
+                <h3 class="section-title">LET'S BUILD WHAT FLIES NEXT.</h3>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info card-reveal">
+                    <p>Available for engineering consultations, contract work, and full-time opportunities in aerospace and mechanical design.</p>
+                    <ul class="contact-list mono-text">
+                        <li>SYS.EMAIL: satendra.yadav@example.com</li>
+                        <li>SYS.LINKEDIN: linkedin.com/in/satendrayadav</li>
+                        <li>SYS.LOC: Bangalore, India</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline mt-2">Download Resume .PDF</a>
+                </div>
+                <form class="contact-form card-reveal stagger-1" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="mono-text">NAME / IDENTIFIER</label>
+                        <input type="text" id="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="mono-text">SECURE COMMS / EMAIL</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="mono-text">TRANSMISSION / MESSAGE</label>
+                        <textarea id="message" rows="4" required placeholder="State your engineering inquiry..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Transmit Message <span class="arrow">→</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h4>SATENDRA YADAV</h4>
+                <span class="mono-text">Aerospace Engineering</span>
+            </div>
+            <div class="footer-status">
+                <span class="status-dot"></span>
+                <span class="mono-text">SYSTEM STATUS: ONLINE</span>
+            </div>
+            <div class="footer-copy mono-text">
+                &copy; 2026 Satendra Yadav. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom Scripts -->
+    <script src="animations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
