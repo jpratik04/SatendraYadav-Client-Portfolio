@@ -111,7 +111,7 @@
                 <!-- Profile Picture -->
                 <div class="profile-pic-container card-reveal">
                     <div class="tech-frame">
-                        <img src="your-profile-pic.jpg" alt="Satendra Yadav" class="profile-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMwZTE1MjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjOTRhM2I4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+W0lNRyBQTEFDRUhPTERFUl08L3RleHQ+PC9zdmc+';">
+                        <img src="satendra-yadav.jpeg" alt="Satendra Yadav" class="profile-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMwZTE1MjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjOTRhM2I4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+W0lNRyBQTEFDRUhPTERFUl08L3RleHQ+PC9zdmc+';">
                         <div class="frame-corner top-left"></div>
                         <div class="frame-corner top-right"></div>
                         <div class="frame-corner bottom-left"></div>
@@ -121,7 +121,8 @@
 
                 <!-- Profile Info -->
                 <div class="dashboard-main card-reveal stagger-1">
-                    <p>Driven by a passion for advanced fluid dynamics and robust mechanical design, my engineering philosophy revolves around marrying theoretical aerodynamics with manufacturable, real-world solutions. I thrive in environments demanding rigorous analysis, optimizing systems that operate under extreme stress and thermal conditions.</p>
+                    <p>Driven by a passion for aerodynamics, CFD, and aerospace vehicle performance, my engineering approach translates aerodynamic theory into simulation-driven solutions. I thrive on rigorous analysis of flow fields, aerodynamic forces and moments, stability and control, and dynamic derivatives. With hands-on experience in ANSYS Fluent, CFD++, CATIA V5, SpaceClaim, and GD&T, I aim to bridge computational analysis with practical aerospace design while advancing my expertise in simulation and research.
+                    </p>
                 </div>
                 
                 <!-- Sidebar Meta -->
@@ -136,7 +137,7 @@
                     </div>
                     <div class="info-panel card-reveal stagger-3">
                         <span class="panel-label">LOCATION</span>
-                        <span class="panel-value">Bangalore, India</span>
+                        <span class="panel-value">Nasik, India</span>
                     </div>
                 </div>
             </div>
@@ -345,18 +346,24 @@
                     </ul>
                     <a href="#" class="btn btn-outline mt-2">Download Resume .PDF</a>
                 </div>
-                <form class="contact-form card-reveal stagger-1" id="contactForm">
+                <form class="contact-form card-reveal stagger-1" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="2ab07bd7-0cb2-4326-a471-d6e4fbfa54f9">
+                    
+                    <!-- Optional: Subject line in email -->
+                    <input type="hidden" name="subject" value="New Transmission from Portfolio Website">
+                
                     <div class="form-group">
                         <label for="name" class="mono-text">NAME / IDENTIFIER</label>
-                        <input type="text" id="name" required placeholder="Enter your name">
+                        <input type="text" name="name" id="name" required placeholder="Enter your name">
                     </div>
                     <div class="form-group">
                         <label for="email" class="mono-text">SECURE COMMS / EMAIL</label>
-                        <input type="email" id="email" required placeholder="Enter your email">
+                        <input type="email" name="email" id="email" required placeholder="Enter your email">
                     </div>
                     <div class="form-group">
                         <label for="message" class="mono-text">TRANSMISSION / MESSAGE</label>
-                        <textarea id="message" rows="4" required placeholder="State your engineering inquiry..."></textarea>
+                        <textarea name="message" id="message" rows="4" required placeholder="State your engineering inquiry..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Transmit Message <span class="arrow">→</span></button>
                 </form>

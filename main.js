@@ -77,24 +77,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Contact Form Intercept
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = contactForm.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
+
+            // UI Transmitting State
             btn.innerHTML = 'TRANSMITTING...';
             btn.style.backgroundColor = 'var(--bg-surface)';
             btn.style.color = 'var(--cyan-accent)';
-            
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    btn.innerHTML = 'TRANSMISSION SENT';
+                    btn.style.backgroundColor = '#00ff00';
+                    btn.style.color = '#000';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Transmission Failed');
+                }
+            } catch (error) {
+                btn.innerHTML = 'COMMS ERROR';
+                btn.style.backgroundColor = '#ff0033';
+                btn.style.color = '#fff';
+            }
+
             setTimeout(() => {
-                btn.innerHTML = 'TRANSMISSION SENT';
-                btn.style.backgroundColor = '#00ff00';
-                btn.style.color = '#000';
-                contactForm.reset();
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style = '';
-                }, 3000);
-            }, 1500);
+                btn.innerHTML = originalText;
+                btn.style = '';
+            }, 3500);
         });
     }
+   
 });
