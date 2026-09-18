@@ -117,3 +117,88 @@ document.addEventListener('DOMContentLoaded', () => {
     }
    
 });
+
+// Carousel Logic for 2nd Project Card
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('wing-carousel');
+    if (!carousel) return;
+
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.dot');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let startX = 0;
+    let isDragging = false;
+    let slideTimer = null;
+
+    function updateSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay();
+        slideTimer = setInterval(() => {
+            updateSlide(currentIndex + 1);
+        }, 3000);
+    }
+
+    function stopAutoPlay() {
+        if (slideTimer) clearInterval(slideTimer);
+    }
+
+    // Touch Swipe Events (Mobile)
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        stopAutoPlay();
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        const endX = e.changedTouches[0].clientX;
+        const diffX = endX - startX;
+
+        if (diffX < -40) updateSlide(currentIndex + 1); // Swipe Left
+        else if (diffX > 40) updateSlide(currentIndex - 1); // Swipe Right
+        
+        startAutoPlay();
+    });
+
+    // Mouse Drag Events (Desktop)
+    carousel.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+        isDragging = true;
+        stopAutoPlay();
+    });
+
+    carousel.addEventListener('mouseup', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        const diffX = e.clientX - startX;
+
+        if (diffX < -40) updateSlide(currentIndex + 1);
+        else if (diffX > 40) updateSlide(currentIndex - 1);
+        
+        startAutoPlay();
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            startAutoPlay();
+        }
+    });
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+
+    // Initial Start
+    startAutoPlay();
+});
