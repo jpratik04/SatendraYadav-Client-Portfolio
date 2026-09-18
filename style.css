@@ -320,3 +320,61 @@ footer { border-top: 1px solid var(--border-color); padding: 40px 0; background:
     flex-shrink: 0;
     object-fit: cover;
 }
+
+/* Achievements SVG Tech Icons */
+.achieve-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: rgba(0, 229, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.achieve-icon svg {
+    width: 26px;
+    height: 26px;
+    stroke: var(--cyan-accent);
+    filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.achieve-card:hover .achieve-icon {
+    background: rgba(0, 229, 255, 0.12);
+    border-color: var(--cyan-accent);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+}
+
+.achieve-card:hover .achieve-icon svg {
+    transform: scale(1.1);
+}
+
+/* Achievement Link Styling */
+.achieve-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cyan-accent);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.achieve-link .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.achieve-link:hover {
+    color: #ffffff;
+}
+
+.achieve-link:hover .arrow {
+    transform: translate(3px, -3px);
+}
