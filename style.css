@@ -378,3 +378,62 @@ footer { border-top: 1px solid var(--border-color); padding: 40px 0; background:
 .achieve-link:hover .arrow {
     transform: translate(3px, -3px);
 }
+
+/* --- LOGO CONTAINERS FOR EDUCATION & EXPERIENCE --- */
+
+.card-header-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.org-logo-wrap {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 8px;
+    padding: 6px;
+    transition: all 0.3s ease;
+}
+
+.org-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.95) contrast(1.05);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effects */
+.edu-card:hover .org-logo-wrap,
+.timeline-content:hover .org-logo-wrap {
+    border-color: var(--cyan-accent);
+    background: rgba(0, 229, 255, 0.08);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+}
+
+.edu-card:hover .org-logo,
+.timeline-content:hover .org-logo {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 480px) {
+    .card-header-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
